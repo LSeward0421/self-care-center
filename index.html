@@ -9,8 +9,10 @@
     <header>
       <h1 class="header">✨ Self Care Center ✨</h1>
     </header>
-    
-    <h2 class="message-question">Which type of message?</h2>
+
+    <section class="main-page hidden">
+      <h2 class="greeting">Well hi there!</h2> 
+      <h2 class="message-question">Which type of message?</h2>
       <section class="selection-section center">
         <input class="radio-button-a" type="radio" name= "message" value="affirmation"/> affirmation
         <input class="radio-button-m" type="radio" name= "message" value="mantra"/> mantra
@@ -22,7 +24,15 @@
       </section>
     </section>
 
-   <!-- login section -->
+    <section class="login-page">
+      <h2 class="header">✨ Login ✨</h2>
+      <section class="login-form center">
+        <form>
+          <input id="username" type="text" name="login-name" placeholder="Your Name">
+          <input class="login-button center" type="submit" value="Login">
+        </form>
+      </section>
+    </section>
 
     <script type="text/javascript" src="main.js"></script>
     <script src="./assets/messages.js"></script>
