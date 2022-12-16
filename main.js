@@ -4,22 +4,42 @@
 
 // query selectors
 
-var affirmBtn = document.querySelector(".radio-button-A")
 
-var mantraBtn = document.querySelector("radio-button-M")
+var affirmationBtn = document.querySelector(".radio-button-a");
+var mantraBtn = document.querySelector(".radio-button-m");
+var receiveMessageBtn = document.querySelector(".receive-msg-button");
 
-var receiveMsgBtn = document.querySelector(".receive-msg-btn")
-
-var meditationImage = document.querySelector("meditation-image")
-
-
-
+var medImage = document.querySelector(".meditation-image");
+var message = document.querySelector(".display-message");
 
 // event listeners
 
+receiveMessageBtn.addEventListener("click", createDisplayMessage);
 
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
 
+function createDisplayMessage() {
 
+  var affirmationMsg = affirmations[getRandomIndex(affirmations)];
+  var mantraMsg = mantras[getRandomIndex(mantras)];
 
+    if (affirmationBtn.checked) {
+      message.innerText = affirmationMsg;
+  } else if (mantraBtn.checked) {
+      message.innerText = mantraMsg;
+  }
 
-// functions/event handlers
+  hideImg();
+  unhideMsg();
+}
+
+function hideImg() {
+  medImage.classList.add('hidden');
+}
+
+function unhideMsg() {
+  message.classList.remove('hidden');
+}
+
