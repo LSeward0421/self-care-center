@@ -109,10 +109,10 @@ h1 {
 
 .login-header {
   font-family:'Quicksand', sans-serif;
-  color: #ffffff;
-  font-size: 30px;
+  color:#000000;
+  font-size: 27px;
   text-align: center;
-  margin-bottom: 85px;
+  margin-bottom: 15px;
   margin-top: 40px;
  }
 
